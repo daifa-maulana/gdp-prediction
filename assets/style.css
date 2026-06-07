@@ -1,0 +1,307 @@
+/* ═══════════════════════════════════════════════════════════
+   GDP Indonesia — Dark Modern Professional Theme
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary:     #4F8EF7;
+    --primary-dim: #2D5FBF;
+    --accent:      #00D4AA;
+    --danger:      #FF5757;
+    --warning:     #FFB347;
+    --bg-main:     #0D1117;
+    --bg-card:     #161B22;
+    --bg-card2:    #1C2333;
+    --bg-hover:    #21262D;
+    --border:      #30363D;
+    --text-1:      #E6EDF3;
+    --text-2:      #8B949E;
+    --text-3:      #484F58;
+    --sidebar-bg:  #0D1117;
+}
+
+/* ── Global ───────────────────────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background-color: var(--bg-main) !important;
+    color: var(--text-1) !important;
+}
+
+/* ── Main content area ────────────────────────────────────── */
+.main .block-container {
+    padding: 2rem 2.5rem 3rem !important;
+    max-width: 1200px !important;
+    background: var(--bg-main) !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: var(--sidebar-bg) !important;
+    border-right: 1px solid var(--border) !important;
+}
+[data-testid="stSidebar"] * {
+    color: var(--text-1) !important;
+}
+[data-testid="stSidebar"] .stMarkdown p {
+    color: var(--text-2) !important;
+    font-size: 0.8rem !important;
+}
+[data-testid="stSidebarNavLink"] {
+    border-radius: 8px !important;
+    margin: 2px 8px !important;
+    padding: 8px 12px !important;
+    transition: background 0.15s ease !important;
+    color: var(--text-2) !important;
+}
+[data-testid="stSidebarNavLink"]:hover {
+    background: var(--bg-hover) !important;
+    color: var(--text-1) !important;
+}
+[data-testid="stSidebarNavLink"][aria-current="page"] {
+    background: linear-gradient(90deg, rgba(79,142,247,0.15), transparent) !important;
+    border-left: 3px solid var(--primary) !important;
+    color: var(--primary) !important;
+    font-weight: 600 !important;
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+h1 {
+    color: var(--text-1) !important;
+    font-weight: 700 !important;
+    font-size: 1.8rem !important;
+    letter-spacing: -0.02em !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 1px solid var(--border) !important;
+    margin-bottom: 1.5rem !important;
+}
+h2 {
+    color: var(--text-1) !important;
+    font-weight: 600 !important;
+    font-size: 1.3rem !important;
+}
+h3 {
+    color: var(--text-2) !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+}
+
+/* ── Metric cards ─────────────────────────────────────────── */
+[data-testid="stMetric"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    padding: 1.2rem 1.4rem !important;
+    transition: border-color 0.2s !important;
+}
+[data-testid="stMetric"]:hover {
+    border-color: var(--primary) !important;
+}
+[data-testid="stMetricLabel"] {
+    color: var(--text-2) !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+[data-testid="stMetricValue"] {
+    color: var(--text-1) !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+}
+[data-testid="stMetricDelta"] {
+    font-size: 0.8rem !important;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.stButton > button {
+    background: var(--primary) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.55rem 1.8rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 0 0 0 rgba(79,142,247,0) !important;
+}
+.stButton > button:hover {
+    background: var(--primary-dim) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 16px rgba(79,142,247,0.3) !important;
+}
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+[data-testid="stTabs"] {
+    border-bottom: 1px solid var(--border) !important;
+}
+button[data-baseweb="tab"] {
+    background: transparent !important;
+    color: var(--text-2) !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.15s !important;
+}
+button[data-baseweb="tab"]:hover {
+    color: var(--text-1) !important;
+    background: var(--bg-hover) !important;
+}
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary) !important;
+    font-weight: 600 !important;
+}
+
+/* ── Dataframe / Table ────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+.dataframe {
+    background: var(--bg-card) !important;
+    color: var(--text-1) !important;
+}
+
+/* ── Input / Number input / Slider ───────────────────────── */
+[data-testid="stNumberInput"] input,
+[data-testid="stTextInput"] input,
+[data-baseweb="select"] {
+    background: var(--bg-card2) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    color: var(--text-1) !important;
+    font-size: 0.9rem !important;
+}
+[data-testid="stNumberInput"] input:focus,
+[data-testid="stTextInput"] input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(79,142,247,0.15) !important;
+}
+[data-testid="stSlider"] [data-baseweb="slider"] div[role="slider"] {
+    background: var(--primary) !important;
+}
+
+/* ── Selectbox ────────────────────────────────────────────── */
+[data-baseweb="select"] > div {
+    background: var(--bg-card2) !important;
+    border-color: var(--border) !important;
+    color: var(--text-1) !important;
+}
+
+/* ── Expander ─────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+}
+[data-testid="stExpander"] summary {
+    color: var(--text-1) !important;
+    font-weight: 500 !important;
+}
+
+/* ── Alert / Info / Warning / Success ────────────────────── */
+[data-testid="stAlert"] {
+    border-radius: 10px !important;
+    border: none !important;
+    font-size: 0.88rem !important;
+}
+.stSuccess {
+    background: rgba(0,212,170,0.1) !important;
+    border-left: 3px solid var(--accent) !important;
+    color: var(--accent) !important;
+}
+.stInfo {
+    background: rgba(79,142,247,0.1) !important;
+    border-left: 3px solid var(--primary) !important;
+    color: var(--primary) !important;
+}
+.stWarning {
+    background: rgba(255,179,71,0.1) !important;
+    border-left: 3px solid var(--warning) !important;
+}
+.stError {
+    background: rgba(255,87,87,0.1) !important;
+    border-left: 3px solid var(--danger) !important;
+}
+
+/* ── Checkbox ─────────────────────────────────────────────── */
+[data-testid="stCheckbox"] label {
+    color: var(--text-2) !important;
+    font-size: 0.88rem !important;
+}
+
+/* ── Divider ──────────────────────────────────────────────── */
+hr {
+    border-color: var(--border) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+/* ── Custom components ────────────────────────────────────── */
+.result-box {
+    background: linear-gradient(135deg, #1C2B4A 0%, #0D1B35 100%) !important;
+    border: 1px solid rgba(79,142,247,0.3) !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    text-align: center !important;
+    margin: 1rem 0 !important;
+    box-shadow: 0 0 40px rgba(79,142,247,0.08) !important;
+}
+.result-box h2 {
+    color: var(--text-2) !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    border: none !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.info-box {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 3px solid var(--primary) !important;
+    border-radius: 10px !important;
+    padding: 1rem 1.2rem !important;
+    margin: 0.5rem 0 !important;
+    color: var(--text-2) !important;
+    font-size: 0.88rem !important;
+}
+
+.warning-box {
+    background: rgba(255,179,71,0.08) !important;
+    border: 1px solid rgba(255,179,71,0.2) !important;
+    border-left: 3px solid var(--warning) !important;
+    border-radius: 10px !important;
+    padding: 1rem 1.2rem !important;
+}
+
+/* ── Plotly chart background fix ─────────────────────────── */
+.js-plotly-plot .plotly .bg {
+    fill: var(--bg-card) !important;
+}
+
+/* ── Caption / small text ─────────────────────────────────── */
+[data-testid="stCaptionContainer"] {
+    color: var(--text-3) !important;
+    font-size: 0.78rem !important;
+}
+
+/* ── Hide default Streamlit branding ──────────────────────── */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+[data-testid="stToolbar"] { display: none; }
