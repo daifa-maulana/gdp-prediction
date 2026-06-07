@@ -252,5 +252,4 @@ with tab3:
     3. **4 model ML** (Linear Regression, Ridge, Decision Tree, Random Forest) masing-masing memprediksi GDP Growth dari input tersebut
     4. Hasil semua model ditampilkan dan dibandingkan
     """)
-    from utils.navigation import show_navigation
-show_navigation()
+   

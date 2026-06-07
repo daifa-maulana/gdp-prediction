@@ -83,5 +83,3 @@ st.dataframe(pd.DataFrame(dict_data), use_container_width=True, hide_index=True)
 # Download button
 csv = df.to_csv(index=False).encode("utf-8")
 st.download_button("⬇️ Download Dataset (CSV)", csv, "dataset_indonesia.csv", "text/csv")
-from utils.navigation import show_navigation
-show_navigation()

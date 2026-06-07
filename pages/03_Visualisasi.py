@@ -103,5 +103,4 @@ with tab4:
     c2.metric("Median", f"{d.median():.3f}")
     c3.metric("Std Dev", f"{d.std():.3f}")
     c4.metric("Missing", d.isna().sum())
-    from utils.navigation import show_navigation
-show_navigation()
+   

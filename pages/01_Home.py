@@ -81,5 +81,3 @@ st.markdown("""
 
 st.markdown("---")
 st.caption("Data: World Bank Open Data | Model: Scikit-learn | Visualisasi: Plotly")
-from utils.navigation import show_navigation
-show_navigation()

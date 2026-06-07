@@ -129,5 +129,4 @@ if st.button("🔮 Prediksi GDP Growth", type="primary"):
     """, unsafe_allow_html=True)
 
     st.page_link("pages/06_Forecasting.py", label="📡 Lihat Forecast Otomatis 2025–2030 →", icon="📡")
-    from utils.navigation import show_navigation
-show_navigation()
+   
