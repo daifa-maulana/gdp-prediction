@@ -20,11 +20,20 @@ if not os.path.exists(FORECAST_PATH):
     st.warning("⚠️ Forecast belum tersedia. Jalankan notebook `05_forecasting.ipynb` terlebih dahulu.")
     st.stop()
 
-with open(FORECAST_PATH) as f:
-    report = json.load(f)
+@st.cache_data
+def load_forecast_report():
+    with open(FORECAST_PATH) as f:
+        return json.load(f)
 
-HIST_PATH = "data/processed/dataset_indonesia.csv"
-hist_df   = pd.read_csv(HIST_PATH) if os.path.exists(HIST_PATH) else pd.DataFrame()
+@st.cache_data
+def load_hist_data():
+    path = "data/processed/dataset_indonesia.csv"
+    if os.path.exists(path):
+        return pd.read_csv(path)
+    return pd.DataFrame()
+
+report  = load_forecast_report()
+hist_df = load_hist_data()
 
 forecast_years      = report['forecast_years']
 gdp_forecasts       = report['gdp_forecasts']
