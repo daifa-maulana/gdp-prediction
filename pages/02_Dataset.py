@@ -16,7 +16,11 @@ if not os.path.exists(DATA_PATH):
     st.warning("⚠️ Dataset belum tersedia. Jalankan notebook `01_data_collection.ipynb` terlebih dahulu.")
     st.stop()
 
-df = pd.read_csv(DATA_PATH)
+@st.cache_data
+def load_data():
+    return pd.read_csv("data/processed/dataset_indonesia.csv")
+
+df = load_data()
 
 # Summary metrics
 col1, col2, col3, col4 = st.columns(4)
