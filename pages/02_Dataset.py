@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title="Dataset", page_icon="📁", layout="wide", initial_sidebar_state="collapsed")
+from utils.navigation import show_navbar
+show_navbar()
 import pandas as pd
 import os
 
@@ -80,3 +83,5 @@ st.dataframe(pd.DataFrame(dict_data), use_container_width=True, hide_index=True)
 # Download button
 csv = df.to_csv(index=False).encode("utf-8")
 st.download_button("⬇️ Download Dataset (CSV)", csv, "dataset_indonesia.csv", "text/csv")
+from utils.navigation import show_navigation
+show_navigation()

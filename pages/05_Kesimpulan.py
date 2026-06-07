@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title="Kesimpulan", page_icon="📝", layout="wide", initial_sidebar_state="collapsed")
+from utils.navigation import show_navbar
+show_navbar()
 import pandas as pd
 import json, os
 import sys
@@ -173,3 +176,5 @@ st.markdown("""
 
 st.markdown("---")
 st.caption("Proyek Machine Learning — Prediksi GDP Growth Indonesia | Data: World Bank")
+from utils.navigation import show_navigation
+show_navigation()

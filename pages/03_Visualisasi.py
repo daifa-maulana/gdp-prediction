@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title="Visualisasi", page_icon="📊", layout="wide", initial_sidebar_state="collapsed")
+from utils.navigation import show_navbar
+show_navbar()
 import pandas as pd
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -100,3 +103,5 @@ with tab4:
     c2.metric("Median", f"{d.median():.3f}")
     c3.metric("Std Dev", f"{d.std():.3f}")
     c4.metric("Missing", d.isna().sum())
+    from utils.navigation import show_navigation
+show_navigation()

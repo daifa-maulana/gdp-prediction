@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title="Prediksi", page_icon="🔮", layout="wide", initial_sidebar_state="collapsed")
+from utils.navigation import show_navbar
+show_navbar()
 import pandas as pd
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -126,3 +129,5 @@ if st.button("🔮 Prediksi GDP Growth", type="primary"):
     """, unsafe_allow_html=True)
 
     st.page_link("pages/06_Forecasting.py", label="📡 Lihat Forecast Otomatis 2025–2030 →", icon="📡")
+    from utils.navigation import show_navigation
+show_navigation()

@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title="Forecasting", page_icon="📡", layout="wide", initial_sidebar_state="collapsed")
+from utils.navigation import show_navbar
+show_navbar()
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
@@ -249,3 +252,5 @@ with tab3:
     3. **4 model ML** (Linear Regression, Ridge, Decision Tree, Random Forest) masing-masing memprediksi GDP Growth dari input tersebut
     4. Hasil semua model ditampilkan dan dibandingkan
     """)
+    from utils.navigation import show_navigation
+show_navigation()

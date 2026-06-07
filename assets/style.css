@@ -305,3 +305,9 @@ hr {
 #MainMenu { visibility: hidden; }
 footer { visibility: hidden; }
 [data-testid="stToolbar"] { display: none; }
+
+/* Perjelas batas sidebar */
+[data-testid="stSidebar"] {
+    background: #161B22 !important;
+    border-right: 2px solid #4F8EF7 !important;
+}

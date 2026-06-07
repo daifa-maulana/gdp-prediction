@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.set_page_config(page_title="Home", page_icon="🏠", layout="wide")
+st.set_page_config(page_title="Home", page_icon="🏠", layout="wide", initial_sidebar_state="collapsed")
+from utils.navigation import show_navbar
+show_navbar()
 
 with open("assets/style.css", encoding="utf-8") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -79,3 +81,5 @@ st.markdown("""
 
 st.markdown("---")
 st.caption("Data: World Bank Open Data | Model: Scikit-learn | Visualisasi: Plotly")
+from utils.navigation import show_navigation
+show_navigation()
